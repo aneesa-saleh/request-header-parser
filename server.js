@@ -2,11 +2,7 @@
 
 // init project
 var express = require('express');
-var os = require('os');
 var app = express();
-var device = require('express-device');
-
-app.use(device.capture());
 
 // set dir to serve static files
 app.use(express.static('public'));
@@ -24,17 +20,16 @@ app.get("/api/whoami", function (request, response) {
   ip = ip.split(',')[0];                              //get first value only
   var language = request.headers["accept-language"]
                   .split(',')[0];                     //get first value only
+  var os = require('ua-parser')
+                    .parse(request.headers['user-agent']) //user-agent shows application types, os, etc.
+                    .os.toString();
+  var header_info = {
+    "IP address": ip,
+    "Language": language,
+    "Operating System": os
+  };
 
-      var os_string = os.platform();
-      var header_info = {
-        "IP address": ip,
-        "Language": language,
-        "Operating System": os_string
-      };
-
-  response.send(request.device.type.toUpperCase());
-  //response.json(header_info);
-  //});
+  response.json(header_info);
   
 });
 
@@ -46,5 +41,5 @@ app.get('*', function(request, response){
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
-  //console.log('Your app is listening on port ' + listener.address().port);
+  console.log('Your app is listening on port ' + listener.address().port);
 });

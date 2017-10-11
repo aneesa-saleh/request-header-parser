@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "express": "^4.16.1",
-    "express-device": "^0.4.2"
+    "ua-parser": "^0.3.5"
   },
   "engines": {
     "node": "8.x"
