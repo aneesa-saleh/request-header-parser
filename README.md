@@ -10,8 +10,8 @@ Sample Output:
 
 ```
 {
-  "IP Address": "41.184.92.242",
-  "Language": "en-GB,en-US;q=0.8,en;q=0.6",
-  "Operating System": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+  "IP address": "105.112.11.185",
+  "Language": "en-GB",
+  "Operating System": "Mac OS X 10.10.3"
 }
 ```
