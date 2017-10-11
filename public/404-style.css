@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Anton|Varela+Round');
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  margin: 25px;
+  text-align: center;
+  background-color: #030a35;
+}
+
+h1{
+  color: white;
+}
+
+.img-404{
+  width: 200px;
+  height: 100px;
+}
+
+h2.text-404 {
+  font-size: 150px;
+  color: white;
+  margin-top: 20px;
+}
